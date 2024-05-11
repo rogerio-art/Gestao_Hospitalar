@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 50vh;
   background:#031321;
   /* font-family:serif; */
 }
@@ -13,7 +13,7 @@
   /* position: relative;
   display: inline-block; */
   /* padding: 15px 30px; */
-  /* color: #2196f3; */
+  /* color: #0bd4f7; */
   /* text-transform: uppercase; */
   /* letter-spacing: 2px;
   text-decoration: none; */
@@ -26,18 +26,18 @@
 
 a:hover
 {
-  color:#255784;
-  background: #2196f3;
-  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  color:#0bd4f7;
+  background: #0bd4f7;
+  box-shadow: 0 0 0px #0bd4f7, 0 0 20px #0bd4f7, 0 0 40px #0bd4f7;
   transition-delay: 0s;
 
  }
- /*
+ 
 a span
 {
 position: absolute;
 display:ruby-text-container;
-} */
+} 
 
 /* 
 a span:nth-child(1)

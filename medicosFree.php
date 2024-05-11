@@ -1,4 +1,7 @@
-<?php
+<?php  include("./config/db.php") ;?>
+  
+<?php include('header.php'); ?>
+<?php include('sidebar.php'); ?><?php
 session_start();    
 
 if (empty($_SESSION['email'])) {
@@ -8,16 +11,13 @@ if (empty($_SESSION['email'])) {
     
     ?>
 <!doctype html>
-        <html lang="en">
+        <html lang="pt">
         <head>
             <meta charset="utf-8">
        
         </head>
 
-<?php  include("./config/db.php") ;?>
-  
-<?php include('header.php'); ?>
-<?php include('sidebar.php'); ?>
+
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -94,7 +94,7 @@ function mysql_fetch_all($query)
 <td><?php echo $row['nomemedico'];?></td>
 <td><?php echo $row['especialidade'];?></td>
 <td>
- <a href="medicoifo.php?id_medico=<?php echo $row['id_medico']; ?>"><span class="btn btn-primary bg-blue"><i class="fa fa-info"></i><?= '&nbsp;&nbsp'?>Info</span><!--&nbsp;&nbsp;-->
+ <a href="medicoifo.php?id_medico=<?php echo $row['id_medico']; ?>"><span class="btn"STYLE ="color: white; background-color: #16035a;"><i class="fa fa-info"></i><?= '&nbsp;&nbsp'?>Info</span><!--&nbsp;&nbsp;-->
 </td>
 </tr>
 
@@ -102,9 +102,10 @@ function mysql_fetch_all($query)
   </tbody>
  
 </table>
-<a href="index.php"><span class="btn btn-primary bg-blue"><i class="fa fa-back"></i>Voltar</span><!--&nbsp;&nbsp;-->
 
               </section>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.php"><span class="btn"STYLE ="color: white; background-color: #16035a;"><i class="fa fa-back"></i>Voltar</span><!--&nbsp;&nbsp;-->
+
               </body>
             </div>
             <?php include('footer.php'); ?>

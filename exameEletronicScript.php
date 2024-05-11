@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $nome = ($_SESSION ['name']);
 
     }
-        if ($score > 2){
+        if ($score > 4){
             $resultado ="Apto";
             } else{
             $resultado ="Não Apto";

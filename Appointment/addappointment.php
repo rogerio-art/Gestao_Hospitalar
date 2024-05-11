@@ -1,6 +1,6 @@
 <?php include"../Include/header.php";?>
 <?php include"../Include/sidebar.php";?> 
-<?php include"../controllers/marcarconsulta_admin.php";?>  
+<?php //include"../controllers/marcarconsulta_admin.php";?>  
 <?php 
   include("../inc/connect.php") ;
 
@@ -31,10 +31,11 @@ function getfee(val) {
 
 $(function() {
     $("#patient").change(function() {
-        var mostrarnome = $("#patient option:selected").text();
-        $("#namepatient").val(mostrarnome);
+        var idSelecionado = $("#patient option:selected").val();
+        $("#id").val(idSelecionado);
     });
 });
+
 </script>
 
 <?php
@@ -51,7 +52,7 @@ function mysql_fetch_all($query) {
   <div class="content-wrapper">
     <section class="content-header">
       <h1>
-      Marcar Consulta
+       Matrícula
         <small></small>
       </h1>
       <ol class="breadcrumb">
@@ -65,43 +66,31 @@ function mysql_fetch_all($query) {
 <div class="col-md-12">
     <div class="box box-primary">
             <div class="box-header with-border bg-blue">
-             <i class="fa fa-edit"></i> <h3 class="box-title">Marcar Consulta</h3>
+             <i class="fa fa-edit"></i> <h3 class="box-title">Área de Matrícula</h3>
             </div>
-        <form method="POST" >
+        <form action="../controllers/marcarconsulta_admin.php" method="POST" enctype="multipart/form-data" >
               <div class="box-body">
                 <div class="form-group">
-                <div class="form-group">
-                <label for="exampleInputEmail1">Paciente</label>
+                <label for="exampleInputEmail1">Aluno</label>
                 <select name="patient" id="patient" class="form-control select2"  required="required">
-                 
-<?php
-$p_query="SELECT * FROM beneficiario ";
-$res=mysqli_query($connection,$p_query);
-while ($row1 =mysqli_fetch_array($res)) {
-  echo "Escolher";?>
-<option value="<?php echo $row1['id'];?>"><?php echo $row1['namebenif'];?>
-
-</option>  
-
-<?php } ?> 
-<?php
-
- $p_query="SELECT * FROM patientregister";
-$res=mysqli_query($connection,$p_query);
-while ($row1 =mysqli_fetch_array($res)) {
-    $row1['id'];?>
-<option value="<?php $row1['id'];?>"><?php echo $row1['name'];?>
-<?php } ?>  
-</option>            
+                <option value="">Selecione o Aluno</option>
+                
+                <?php
+    $p_query = "SELECT * FROM patientregister";
+    $res = mysqli_query($connection, $p_query);
+    while ($row1 = mysqli_fetch_array($res)) {
+        ?>
+        <option value="<?php echo $row1['id']; ?>"><?php echo htmlentities($row1['name']); ?></option>
+    <?php } ?>
 </select>
 </div>
 
 <div class="form-group">
                 <label for="DoctorSpecialization">
-																Especialidade do médico
+																Curso 
 															</label>
 							<select name="especialidade" class="form-control"  onChange="getdoctor(this.value);" onclick="getfee(this.value);" required="required">
-																<option value="">Selecione a especialidade</option>
+																<option value="">Selecione o curso</option>
 <?php $ret=mysqli_query($connection,"select * from especialidade");
 while($row=mysqli_fetch_array($ret))
 {
@@ -113,13 +102,12 @@ while($row=mysqli_fetch_array($ret))
                                 </select>         
                   
                 </div>
-
               
 <label >
-																Médico
+																Formador
 															</label>
 						<select name="doctor" class="form-control" id="doctor"  required="required">
-						<option value="">Selecione o Médico</option>
+						<option value="">Selecione o Formador</option>
 						</select>
 
 
@@ -130,19 +118,18 @@ while($row=mysqli_fetch_array($ret))
 						<option value="">Selecione o Preço</option>
 						</select>
 
-
-
-<label for="exampleInputEmail1">Data da Consulta</label><br>
-<input type="hidden" class="form-control" name="namepatient" id="namepatient" value="<?php echo $row1 ?>"  readonly="readonly">
-      <!-- <label for="exampleInputEmail1">Data</label><br> -->
-
+<label for="exampleInputEmail1">Data da Matrícula</label><br>
+<input type="text" class="form-control" name="id" id="id" value=""  readonly="readonly">
+<!-- <label for="exampleInputEmail1">Data</label><br> -->
 <input type="date" id="data" name="data" class="form-control" value="<?php echo date('Y-m-d');  ?>" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 
 <div class="form-group">
                 <label>Hora</label>
-     <input type="time"  name="hora" id="hora" class="form-control"  >
-     </div>
+             
+  <?php $time = exec('time /T'); ?>
+  <input type="text" class="form-control" name="hora" id="hora"   required="required" value="<?php echo $time;  ?>" >
+    </div>
                
                 
             <div class="form-group">
@@ -158,8 +145,9 @@ while($row=mysqli_fetch_array($ret))
                 </div> -->
               
         
-               <button type="submit"  name="submit" class="btn bg-blue">Salvar</button>
           </div>
+          
+          <button type="submit"  name="submit" class="btn bg-blue">Salvar</button>
       </form>
     </div>
   

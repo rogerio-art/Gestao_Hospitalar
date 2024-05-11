@@ -43,7 +43,7 @@ Meus Benificiários
 <div class="box-header with-border">
 <i class="fa fa-user"></i> <h3 class="box-title">Benificiários Activos</h3></br></br>
 
-  &nbsp;&nbsp;&nbsp;&nbsp;<a href="./beneficiario.php"class="btn btn-primary bg-blue"  style="height: 35px;"><i class="fa fa-plus-circle"></i> Adicionar Benificiário</a><br>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="./beneficiario.php"class="btn"STYLE ="color: white; background-color: #16035a;"  style="height: 35px;"><i class="fa fa-plus-circle"></i> Adicionar Benificiário</a><br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -95,15 +95,13 @@ foreach ($row1 as $row)
   </tbody>
   
 </table>
-</br>
-<a href="actividades.php"><span class="btn btn-primary bg-blue"><i class="fa fa-back"></i>Voltar</span><!--&nbsp;&nbsp;-->
-
-    <!-- <button type="button" onclick="window.print();" class="btn btn-primary bg-blue">Imprimir</button> -->
+    <!-- <button type="button" onclick="window.print();" class="btn"STYLE ="color: white; background-color: #16035a;">>Imprimir</button> -->
  
        </div>
       </div>       
       </div>
     </section>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="actividades.php"><span class="btn"STYLE ="color: white; background-color: #16035a;"><i class="fa fa-back"></i>Voltar</span><!--&nbsp;&nbsp;-->
   </div>
  <?php include"./footer.php";?>
   

@@ -44,8 +44,8 @@
                               </div>
                           </div>
                           <div class="content-update-box">
-                              <!-- <button type="submit" class="btn" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 20px; background-color: #2196f3 ;"><?php echo get_phrase('login'); ?></button> -->
-                              <input name="loginadmin" type="submit"  onclick="submit" id="log-btn" value="Entrar" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #2196f3;" size = "10" maxlength = "30" class="form-control" class="btn btn-primary"  />
+                              <!-- <button type="submit" class="btn" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 20px; background-color: #16035a ;"><?php echo get_phrase('login'); ?></button> -->
+                              <input name="loginadmin" type="submit"  onclick="submit" id="log-btn" value="Entrar" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #16035a;" size = "10" maxlength = "30" class="form-control" class="btn btn-primary"  />
                       
                       
                             </div>

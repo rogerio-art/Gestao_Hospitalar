@@ -9,7 +9,7 @@
      <link rel="stylesheet" type="text/css"  href="print.css" media="print">
         </head>
         <?php
-        $s="SELECT * FROM addappointment  WHERE  patient='".$_SESSION['id']."'";
+        $s="SELECT * FROM addappointment  WHERE  patient='".$_SESSION['id']."' ";
 $query=mysqli_query($connection,$s)or die (mysqli_error($connection));
 $numrows=mysqli_num_rows($query)or die (mysqli_error($connection));
 $row1=mysql_fetch_all($query);
@@ -42,20 +42,21 @@ Minhas Consultas
 
 </br></br>
 
-        &nbsp;&nbsp;&nbsp;&nbsp;  <a href="./marcarconsulta.php"><button type="submit"   name="submit" class="btn btn-primary bg-blue"><i class="fa fa-plus-square"></i>&nbsp; Agendar Consulta</button></a><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;  <a href="./fichadematricula.php"><button type="submit"   name="submit" class="btn"STYLE ="color: white; background-color: #16035a;"><i class="fa fa-plus-square"></i>&nbsp; Nova Matricula</button></a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 <div class="box-body">
               <table id="example1" class="table table-bordered table-striped table-hover">
                 <thead>
                 <tr>
-                  <!-- <th>id</th> -->
+                <th>Nº de Matrícula</th>
                   <!--th>Paciente</th-->
-                  <th>Nom da Consulta</th>
+                  <th>Nome do Curos</th>
                   <!--th>Médico</th-->
-                  <th>Data</th>
+                  <th>Data da matrícula</th>
                   <!--th>Hora</th-->
                   <th>Estado</th>
+                  <th>Documeto</th>
                   <th>Opção</th>
                 </tr>
                 </thead>
@@ -71,7 +72,8 @@ Minhas Consultas
          //echo "$description"; exit();
       
       ?> <tr>
-      <!-- <td><?php // echo $row['id'];?></td> -->
+     
+       <td><?php echo $row['cod_matricula'];   ?></td>
       <!--td><?php// echo $row['namepatient'];?></td-->
         <td><?php echo $row['especialidade'];?></td>
         <!--td><?php// echo $row['doctor'];?></td-->
@@ -82,51 +84,38 @@ Minhas Consultas
  if ($date_now= date("Y-m-d") > $row['app_date'] && $row['estado']=='1'  ){
     ?>  
      <td>
-   <label type="" class=""><i class=""></i><font color="green"> Processado </font></label>    
+   <label type="" class=""><i class=""></i><font color="green"> Confirmado </font></label>    
    </td>
   <?php
   }
 
-
- else if ($date_now= date("Y-m-d") <= $row['app_date']  && $row['estado']=='3'  ){
+ else if ($row['app_date']  && $row['estado']=='3'  ){
     ?>  
      <td>
-   <label type="" class=""><i class=""></i><font color="black"> Pendente </font></label>    
+   <label type="" class=""><i class=""></i><font color="black"> Pendente  </font></label>    
    </td>
    <td> 
- <a href="
-   updatestatos.php?id=<?php echo $row["id"]; ?>"> <button type="button" class="btn btn-primary bg-red"><i class=""></i>Cancelar</button>
-  
+ <a href="updatestatos.php?id=<?php echo $row["id"];?>"><button type="button" class="btn btn-primary bg-red"><i class=""></i>Cancelar</button>
    </a>
    </td>
   <?php
   }
-
-
-  else if ($date_now= date("Y-m-d") == $row['app_date']  && $row['estado']=='1'  ){
+  else if ($row['estado']=='1'  ){
     ?>  
      <td>
-   <label type="" class=""><i class=""></i><font color="green"> Em curso </font></label>    
+     <label type="" class=""><i class=""></i><font color="green"> Confirmado </font></label>      
    </td>
   <?php
   }
 
-  
- else if ($date_now= date("Y-m-d") > $row['app_date'] && $row['estado']=='3'  ){
+ else if ( $row['app_date'] && $row['estado']=='3'  ){
   ?>  
    <td>
- <label type="" class=""><i class=""></i><font color="red"> Cancelado </font></label>    
+    <label type="" class=""><i class=""></i><font color="black"> Pendente  </font></label>    
+   
+    
  </td>
-<?php
-}
 
-
-
-  else if ($date_now= date("Y-m-d") < $row['app_date'] && $row['estado']=='1'  ){
-    ?>  
-     <td>
-   <label type="" class=""><i class=""></i><font color="green"> Confirmado </font></label>    
-   </td>
   <?php
   }
 
@@ -135,66 +124,79 @@ Minhas Consultas
     ?>  
      <td>
    <label type="" class=""><i class=""></i><font color="red"> Cancelado </font></label>    
+   
+   </td>
+   <td>
+   </td>
+   <td>
+   <a href="deletematricula.php?id=<?php echo $row['id']; ?>"><span class="btn btn-danger"><i class="fa fa-trash-o"></i>Apagar </span></a></td>
    </td>
   <?php
   }
-
-
   else{
     ?>
-<td>
-    <!--label type="" class=""><i class=""></i><font color="blue"> Em curso </font></label-->   
-    </td>
-<?php 
+ 
+ <?php 
   }
   ?>
    
    <?php
-   if ($date_now= date("Y-m-d") > $row['app_date'] && $row['estado']=='1'  ) {
+   if ($row['estado']=='1'  ) {
    ?>
-  
-
-
-   <td> 
-  <a href="recibo.php?id=<?php echo $row['id'];?>"><button type="button" class="btn btn-primary bg-blue">Recibo <i class="fa fa-eye"></i></button></a>
-  </td>
-
-  <?php
-  
-}
-
-
-
-else  {
-  ?>
-
-  <?php
-}
-
-?>
+    <td> <?php
+    $filePath = "./Upload/Documento/" . $row['file'];
  
+      $allowedExtensions = ['pdf', 'txt', 'xls', 'xlsx', 'doc', 'docx' ,'jpg','jpeg','png', 'gif','bmp','svg','tiff','mp4','avi','mp3'];
+     
+      if (!empty($row['file']) && file_exists($filePath)) {
+          $fileExtension = strtolower(pathinfo($row['file'], PATHINFO_EXTENSION));
+          
+          
+          if (in_array($fileExtension, $allowedExtensions)) {
+              // Display default document icon
+             
+              ?>
+             <a href ="./Upload/Documento/<?php echo $row['file']; ?>" target="_blank"> <img src="./Upload/file/pdf.jpg" style="height:35px;width:60px;"  alt="Default Image" /> </a>
+              <?php
+          } else  {
+              // Display custom icon for video files
+              ?>
+              <img src="./Upload/File/not found.jpg" style="height:35px;width:60px;" alt="Video Icon" />
+              <?php
+          } 
+  ?>       
+             </td>
+   <td> 
+  <a href="recibo.php?id=<?php echo $row['id'];?>"><button type="button" class="btn"STYLE ="color: white; background-color: #16035a;">Recibo <i class="fa fa-eye"></i></button></a>
+  </td>
+  <?php } if ($row['estado']=='1'  && ($row['file']==null) ) { ?>
 
+  <td>
+  <!-- <button class="btn" STYLE ="color: white; background-color: #16035a;" disabled>Recibo <i class="fa fa-eye"></i></button>
+   -->
+  <a href="recibo.php?id=<?php echo $row['id'];?>"><button type="button" class="btn"STYLE ="color: white; background-color: #16035a;">Recibo <i class="fa fa-eye"></i></button></a>
+  </td>
+  
+  <?php
+}
+}
+?>
 
 </tr>
 <?php } ?>
-
 </tbody>
 </table>
-      </br>
-              <a href="actividades.php"><button type="button" class="btn btn-primary bg-blue">Voltar</button></a><!--&nbsp;&nbsp;-->
-              <a href="./excelallappointment.php"><button type="button" class="btn btn-primary bg-blue">Exportar Excel</button></a>
-              <!-- <button onclick=" window.print();" id="print-btn" class="btn bg-blue"><i class="fa  fa-print"></i>  Imprimir</button> -->
-      
-     
-
-
-            </div>
+</br>
+              <a href="actividades.php"><button type="button" class="btn"STYLE ="color: white; background-color: #16035a;">Voltar</button></a><!--&nbsp;&nbsp;-->
+              <a href="./excelallappointment.php"><button type="button" class="btn"STYLE ="color: white; background-color: #16035a;">Exportar Excel</button></a>
+                    <!-- <button onclick=" window.print();" id="print-btn" class="btn bg-blue"><i class="fa  fa-print"></i>  Imprimir</button> -->
       </div>
+     </div>
     </div>
+   </div>
   </div>
-  </div>
-</section>
-  </div>        
+ </section>
+</div>
  
 
 <?php include('footer.php');?>

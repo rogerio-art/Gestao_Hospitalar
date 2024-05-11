@@ -190,19 +190,19 @@
 .btn-dropbox:focus,
 .btn-dropbox.focus {
   color: #ffffff;
-  background-color: #0d6aad;
+  background-color: #16035a;
   border-color: rgba(0, 0, 0, 0.2);
 }
 .btn-dropbox:hover {
   color: #ffffff;
-  background-color: #0d6aad;
+  background-color: #16035a;
   border-color: rgba(0, 0, 0, 0.2);
 }
 .btn-dropbox:active,
 .btn-dropbox.active,
 .open > .dropdown-toggle.btn-dropbox {
   color: #ffffff;
-  background-color: #0d6aad;
+  background-color: #16035a;
   border-color: rgba(0, 0, 0, 0.2);
 }
 .btn-dropbox:active,
@@ -440,25 +440,25 @@
 }
 .btn-microsoft {
   color: #ffffff;
-  background-color: #2672ec;
+  background-color: #16035a;
   border-color: rgba(0, 0, 0, 0.2);
 }
 .btn-microsoft:focus,
 .btn-microsoft.focus {
   color: #ffffff;
-  background-color: #125acd;
+  background-color: #16035a;
   border-color: rgba(0, 0, 0, 0.2);
 }
 .btn-microsoft:hover {
   color: #ffffff;
-  background-color: #125acd;
+  background-color: #16035a;
   border-color: rgba(0, 0, 0, 0.2);
 }
 .btn-microsoft:active,
 .btn-microsoft.active,
 .open > .dropdown-toggle.btn-microsoft {
   color: #ffffff;
-  background-color: #125acd;
+  background-color: #16035a;
   border-color: rgba(0, 0, 0, 0.2);
 }
 .btn-microsoft:active,
@@ -467,7 +467,7 @@
   background-image: none;
 }
 .btn-microsoft .badge {
-  color: #2672ec;
+  color: #16035a;
   background-color: #ffffff;
 }
 .btn-openid {

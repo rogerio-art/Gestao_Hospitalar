@@ -1,4 +1,4 @@
-<?php include('config/db.php'); ?>
+<?php include('../config/db.php'); ?>
 
 
 
@@ -36,6 +36,7 @@ if($username && $password)
       $name          = $row['fname'];    
       $lname         = $row['lname'];
       $imageupload   = $row['profile'];
+      $telefone   = $row['telefone'];
 			//echo $dbpassword; exit();
 		}	
 	
@@ -51,8 +52,9 @@ if($username && $password)
       $_SESSION['fname'] = $name;
       $_SESSION['lname'] = $lname;
       $_SESSION['profile'] = $imageupload;
-       header("Location: ./Index");
-
+      $_SESSION['telefone'] =$telefone;
+       header("Location: ../Index");
+      
 
 		}
 		else

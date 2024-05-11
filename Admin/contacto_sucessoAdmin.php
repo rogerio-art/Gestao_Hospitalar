@@ -18,8 +18,8 @@
          <i class=""></i> 
           </div>
    
-            <h3 class="text-center"> <font color="black">Mensagem enviada com Sucesso! </font> </h3><br>
-        <center> <a href="../Admin/recrutamento.php"  value="Salvar" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #2196f3;" size = "10" maxlength = "30" class="form-control" class="btn btn-primary">Ir para página principal</a></center>
+            <h3 class="text-center"> <font color="black">Material de apoio submetido com Sucesso! </font> </h3><br>
+        <center> <a href="../Admin/recrutamento.php"  value="Salvar" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #16035a;" size = "10" maxlength = "30" class="form-control" class="btn btn-primary">Ir para página principal</a></center>
      
             </div>
           <!-- /. box -->

@@ -166,9 +166,7 @@
          
           </ul>
            </li>
-       
         <li>
-
         <li class="treeview">
           <a href="#">
             <i class="fa fa-user"></i> <span>Contacto</span>
@@ -177,12 +175,11 @@
             </span>
           </a>
           <ul class="treeview-menu">
+          <li><a href="../Admin/SendMaterialApoio.php"><i class="fa fa-envelope"></i>  Enviar material</a></li>
           <li><a href="../Admin/recrutamento.php"><i class="fa fa-envelope"></i> <span> Recebido</span></a></li>
           <li><a href="../Admin/EnviadosContacto.php"><i class="fa fa-envelope"></i>  Enviado</a></li>
-          </ul>
+           </ul>
            </li>
-       
-        
         </li>
         <li class="treeview">
           <a href="#">

@@ -75,7 +75,7 @@ echo " <script>setTimeout(\"location.href='./beneficiario_list.php';\",100);</sc
 
 
             <br><br>
-            <input name="submit" type="submit"  onclick="submit" id="log-btn" value="Salvar" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #2196f3;" size = "10" maxlength = "30" class="form-control" class="btn btn-primary"  />
+            <input name="submit" type="submit"  onclick="submit" id="log-btn" value="Salvar" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #16035a;" size = "10" maxlength = "30" class="form-control" class="btn btn-primary"  />
      
             
 

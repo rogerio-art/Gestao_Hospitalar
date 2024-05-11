@@ -1,23 +1,35 @@
+
+
+<?php include"./header.php";?>
+<?php include"./sidebar.php";?>
 <?php
 session_start();    
 
 if (empty($_SESSION['email'])) {
     header("location: ./Validar_user_logado.php");
-    exit();
+   // exit();
 }
     ?>
-<?php include('header.php');?>
-<?php include('sidebar.php');?>
+
 
         <!doctype html>
         <html lang="en">
         <head>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
- 
+  <style>
+        .box{
+            background-color: lavender;
+            /* Outros estilos podem ser adicionados aqui, se necessário */
+        } 
+        .{
+            background-color: white;
+            /* Outros estilos podem ser adicionados aqui, se necessário */
+        }
+    </style>
         </head>
     <!-- The sidebar -->
-  </body>
+  <body>
     
         <!-- Page contentfaz a pagina se ajustar dentro do header e do sidbar-->
         <div class="content-wrapper">
@@ -52,7 +64,7 @@ if (empty($_SESSION['email'])) {
                 ?>
               <h3><?php echo $row[0];?></h3>
 
-              <p>Minhas Prescrições</p>
+              <p>Boletin de Nota</p>
             </div>
             <div class="icon">
               <i class="fa fa-wheelchair"></i>
@@ -78,7 +90,7 @@ if (empty($_SESSION['email'])) {
         <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="small-box bg-green">
+          <div class="small-box bg-aqua">
             <div class="inner">
               <?php 
                 $sql="SELECT count(id) FROM  addappointment WHERE patient='".$_SESSION['id']."'";
@@ -88,7 +100,7 @@ if (empty($_SESSION['email'])) {
                 ?>
               <h3><?php echo $row[0];?></h3>
 
-              <p>Minhas Consultas</p>
+              <p>Ficha de Matrícula</p>
             </div>
             <div class="icon">
               <i class="fa fa-calendar-check-o"></i>
@@ -96,14 +108,14 @@ if (empty($_SESSION['email'])) {
             <?php  if($row[0]<1){
                            ?>
                            
-                           <a href="marcarconsulta.php" class="small-box-footer"> Marcar agora <i class="fa fa-arrow-circle-right"></i></a>
+                           <a href="fichadematricula.php" class="small-box-footer"> Matricular se agora <i class="fa fa-arrow-circle-right"></i></a>
                         
                          
                          <?php
                            }else{
                             ?>
                           
-                          <a href="./atividadeConsulta.php" class="small-box-footer"> Clica para ver  <i class="fa fa-arrow-circle-right"></i></a>
+                          <a href="./matricula.php" class="small-box-footer"> Clica para ver  <i class="fa fa-arrow-circle-right"></i></a>
     
                            <?php
                            }
@@ -114,7 +126,7 @@ if (empty($_SESSION['email'])) {
          <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="small-box bg-purple">
+          <div class="small-box bg-aqua">
             <div class="inner">
                    <?php 
                 $sql="SELECT count(*) FROM addpayment WHERE patient='".$_SESSION['id']."'";
@@ -150,7 +162,7 @@ if (empty($_SESSION['email'])) {
         <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="small-box bg-red">
+          <div class="small-box bg-aqua">
             <div class="inner">
                    <?php 
                              $sql="SELECT count(*) FROM  addmedicalhistory WHERE patient='".$_SESSION['id']."'";
@@ -161,7 +173,7 @@ if (empty($_SESSION['email'])) {
                 ?>
               <h3><?php echo $row[0];?></h3>
 
-              <p>Histórico de Saude </p>
+              <p>Histórico do formando </p>
             </div>
             <div class="icon">
               <i class="fa fa-pencil-square-o"></i>
@@ -187,7 +199,7 @@ if (empty($_SESSION['email'])) {
 
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="small-box bg-yellow">
+          <div class="small-box bg-aqua">
             <div class="inner">
                    <?php 
                              $sql="SELECT count(*) FROM  beneficiario WHERE id='".$_SESSION['id']."'";
@@ -225,7 +237,7 @@ if (empty($_SESSION['email'])) {
 
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="small-box bg-red">
+          <div class="small-box bg-aqua">
             <div class="inner">
                    <?php 
                              $sql="SELECT count(*) FROM  justify WHERE id_patient='".$_SESSION['id']."'";
@@ -264,7 +276,7 @@ if (empty($_SESSION['email'])) {
         <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="small-box bg-orange">
+          <div class="small-box bg-aqua">
             <div class="inner">
                    <?php 
                              $sql="SELECT count(*) FROM  contacto WHERE userID='".$_SESSION['id']."'";
@@ -275,7 +287,7 @@ if (empty($_SESSION['email'])) {
                 ?>
               <h3><?php echo $row[0];?></h3>
 
-              <p> Contacto</p>
+              <p> Material de apoio</p>
             </div>
             <div class="icon">
               <i class="fa fa-envelope"></i>
@@ -291,7 +303,7 @@ if (empty($_SESSION['email'])) {
                            }else{
                             ?>
                           
-                          <a href="./contactosEnviados.php" class="small-box-footer">Clica pra ver <i class="fa fa-arrow-circle-right"></i></a>
+                          <a href="./contactosRecebido.php" class="small-box-footer">Clica pra ver <i class="fa fa-arrow-circle-right"></i></a>
          
                            <?php
                            }
@@ -302,7 +314,7 @@ if (empty($_SESSION['email'])) {
         </div>
       <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="small-box bg-red">
+          <div class="small-box bg-aqua">
             <div class="inner">
                    <?php 
                              $sql="SELECT count(*) FROM  exameeletronico WHERE iduser='".$_SESSION['id']."'";
@@ -313,7 +325,7 @@ if (empty($_SESSION['email'])) {
                 ?>
               <h3><?php echo $row[0];?></h3>
 
-              <p> Exame </p>
+              <p> Exame de pro-eficiênia</p>
             </div>
             <div class="icon">
               <i class="fa fa-plus-square"></i>
@@ -342,19 +354,7 @@ if (empty($_SESSION['email'])) {
         <!-- /.col -->
     
    
-            <!-- /.box-body -->
-          </div>
-          <!-- /. box -->
-        </div>
-        <!-- /.col -->
-    
-      </div>
-    </section>
-    <?php include('footer.php');?>
-    <!-- /.content -->
-  </div>    
-   </body>
-
-        </html>
-
-
+      </section>
+    </div>
+ <?php include"./footer.php";?>
+  

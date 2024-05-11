@@ -1,11 +1,11 @@
  
 
   <!-- /.content-wrapper -->
-  <footer class="main-footer">
+  <footer class="main-footer" STYLE ="color: white; background-color: #222d32;">
     <div class="pull-right">
      <b>Verção</b> 1.1
     </div>
-    <strong>Copyright &copy; 2021 Desenvolvido por:<a href="http://consenci.com">Consenci-</a>Consultoria de informática Tel: 944259591</strong> Todos Direitos Reservado
+    <strong>Copyright &copy; 2021 Desenvolvido por:<a href="http://lameirasoft.ao"> Lameira Soft - </a>Consultoria de informática Tel: 944259591</strong> Todos Direitos Reservado
   
   </footer>
 

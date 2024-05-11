@@ -125,27 +125,7 @@ $ ("#categoryselect") .change(function(){
                     
             <div class="container">
                 <label for="exampleInputEmail1">Nome do Paciente</label><br>
-             <select name="patient" id="patient"  class="form-control select2"  style="width:100%;" required="required">
-<option>
-
-<?php $p_query="SELECT * FROM beneficiario ";
-$res=mysqli_query($connection,$p_query);
-while ($row1 =mysqli_fetch_array($res)) {
-  echo "Escolher";  ?>
-<option value="<?php echo $row1['id'];?>"><?php echo $row1['namebenif'];?>
-</option>            
- 
-<?php } ?> 
-</option>
-<?php
-
- $p_query="SELECT * FROM patientregister";
-$res=mysqli_query($connection,$p_query);
-while ($row1 =mysqli_fetch_array($res)) {
-  echo $row1['id'];?>
-<option value="<?php echo $row1['id'];?> "><?php echo $row1['name'];?> 
- </option>
-<?php } ?></select>
+             
 <br><br>
         <label for="exampleInputEmail1">Selecione um Item:</label><br>
         <form id="addItemForm">

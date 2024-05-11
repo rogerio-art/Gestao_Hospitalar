@@ -21,8 +21,8 @@
           </div>
           <div class="col text-end">
    
-            <h3 class="text-center"> <font color="black">Consulta Marcada com sucesso</font> </h3><br>
-        <center> <a href="./atividadeConsulta.php"  value="Salvar" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #2196f3;" size = "10" maxlength = "30" class="form-control" class="btn btn-primary">Ver a Consulta </a></center>
+            <h3 class="text-center"> <font color="black">Matrícula subemetida com sucesso</font> </h3><br>
+        <center> <a href="./matricula.php"  value="Salvar" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #16035a;" size = "10" maxlength = "30" class="form-control" class="btn btn-primary">Ver Matrícula </a></center>
      
           </div>
             <div class="col text-end">

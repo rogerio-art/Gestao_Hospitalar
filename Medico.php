@@ -55,7 +55,7 @@
   
         <main>
 
-        <nav class="navbar navbar-expand-lg  fixed-top " STYLE ="color: white; background-color: #0d6efd;">
+        <nav class="navbar navbar-expand-lg  fixed-top " STYLE ="color: white; background-color: #16035a;">
                 <div class="container">
                     <a class="navbar-brand mx-auto d-lg-none" href="index.php">
                         
@@ -105,7 +105,7 @@
                               </div>
                           </div>
                           <div class="content-update-box">
-                               <input name="loginmedi" type="submit"  onclick="submit" id="log-btn" value="Entrar" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #2196f3;" size = "10" maxlength = "30" class="form-control" class="btn btn-primary"  />
+                               <input name="loginmedi" type="submit"  onclick="submit" id="log-btn" value="Entrar" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #16035a;" size = "10" maxlength = "30" class="form-control" class="btn btn-primary"  />
     
                       
                             </div>

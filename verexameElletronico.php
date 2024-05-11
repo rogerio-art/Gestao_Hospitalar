@@ -6,10 +6,11 @@ if (empty($_SESSION['email'])) {
     exit();
 }
     ?>
+
+<?php include"./header.php";?>
+<?php include"./sidebar.php";?>
 <?php
-include('config/db.php');
-include('header.php');
-include('sidebar.php');
+include("./inc/connect.php");
 
 $query = "SELECT * FROM exameeletronico WHERE iduser = '" . $_SESSION['id'] . "' ORDER BY id DESC ";
 $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
@@ -23,10 +24,11 @@ return $temp;
 }
 ?>
 
+
 <div class="content-wrapper">
   <section class="content-header">
   <h1>
-Meus contactos enviado
+
     <small></small>
   </h1>
   <ol class="breadcrumb">
@@ -40,9 +42,9 @@ Meus contactos enviado
 <div class="box box-primary">
 <div class="box-header with-border">
 <i class="fa fa-user"></i> <h3 class="box-title"> Nome :  <?php echo ($_SESSION ['name'] ); ?></h3>
-</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
- &nbsp;&nbsp;&nbsp;&nbsp;  <a href="./verexameElletronico.php"><button type="submit"   name="submit" class="btn btn-primary bg-blue"><i class="fa fa-plus-square"></i>&nbsp; Enviar Contacto</button></a><br>
+</div>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="./recrutamentoLoged.php"><button type="submit"   name="submit" class="btn btn-primary"STYLE ="color: white; background-color: #16035a;">
+  <i class="fa fa-plus-square"></i>&nbsp; Marcar Nova Prova</button></a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 <div>
@@ -56,6 +58,8 @@ Meus contactos enviado
             <th>Pontuação</th>
             <th>Resultado</th>
             <th>Data</th>
+            <th>Opções</th>
+            <th>Estado</th>
             </tr>
             </thead>
             <tbody>
@@ -75,12 +79,23 @@ $row2=mysqli_fetch_array($w1);//or die (mysqli_error($connection));
 <td><?php echo $row['resultado'];?></td>
 <td><?php echo $row['data'];?></td>
 <td>
-  <a href="verexame.php?id=<?php echo $row['id']; ?>" class="btn bg-blue">
+  <a href="verexame.php?id=<?php echo $row['id']; ?>" class="btn"STYLE ="color: white; background-color: #16035a;">
     <i class="fa fa-eye"></i>
-  </a>&nbsp;&nbsp;
+  </a>
 
   
 <!--a href="./Admin/deleted.php?id=<?php // +echo $row['id']; ?>"><span class="btn btn-danger"><i class="fa fa-trash-o"></i> Apagar</span></a></td-->
+<?php 
+if (empty($row['pontuacao'])) {
+?>
+    <td>Pendente</td>
+<?php 
+} else {
+?>
+    <td>Conclído</td>
+<?php
+}
+?>
 
 </tr>
 <?php } ?>

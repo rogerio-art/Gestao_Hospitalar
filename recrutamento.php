@@ -84,7 +84,7 @@
      
   <div class="col-md-12">
     <br>
-    <input name="submit" type="submit" onclick="myfunction()" id="log-btn" value="Enviar" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #2196f3;" size = "10" maxlength = "30" class="form-control" class="btn btn-primary "  />
+    <input name="submit" type="submit" onclick="myfunction()" id="log-btn" value="Enviar" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #16035a;" size = "10" maxlength = "30" class="form-control" class="btn btn-primary "  />
      
                     </div>         
                                       

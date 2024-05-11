@@ -24,13 +24,13 @@
            <?php if(empty($_SESSION))
            {
 ?>
- <center> <a href="./index.php"  value="Salvar" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #2196f3;" size = "10" maxlength = "30" class="form-control" class="btn btn-primary">Voltar para página principal</a></center>
+ <center> <a href="./index.php"  value="Salvar" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #16035a;" size = "10" maxlength = "30" class="form-control" class="btn btn-primary">Voltar para página principal</a></center>
      <?php
            }
            else
 {
   ?>
-  <center> <a href="./actividades.php"  value="Salvar" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #2196f3;" size = "10" maxlength = "30" class="form-control" class="btn btn-primary">Voltar para página principal</a></center>
+  <center> <a href="./actividades.php"  value="Salvar" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #16035a;" size = "10" maxlength = "30" class="form-control" class="btn btn-primary">Voltar para página principal</a></center>
  <?php
 }
            ?>

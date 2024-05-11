@@ -87,8 +87,8 @@ $row=mysqli_fetch_array($query)or die (mysqli_error($connection));
          
   </div>
 </section>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="contactosEnviados.php"><button type="button" name="cancel" class="btn btn-primary" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #2196f3;"><i class="fa fa-times"></i> Voltar</button></a>
-&nbsp;<a href="ResponseContactUser.php?id=<?php echo $row['id']; ?>"><button type="button" name="cancel" class="btn btn-primary" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #2196f3;"><i class="fa fa-times"></i> Responder</button></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="contactosRecebido.php"><button type="button" name="cancel" class="btn btn-primary" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #16035a;"><i class="fa fa-times"></i> Voltar</button></a>
+&nbsp;<a href="ResponseContactUser.php?id=<?php echo $row['id']; ?>"><button type="button" name="cancel" class="btn btn-primary" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #16035a;"><i class="fa fa-times"></i> Responder</button></a>
 
 </div>
 <?php include "footer.php";?>

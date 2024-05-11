@@ -22,7 +22,7 @@
           </div>
    
             <h3 class="text-center"> <font color="black">Formulário enviada com Sucesso! pelo que, daremos o devido tratamento</font> </h3><br>
-        <center> <a href="./actividades.php"  value="Salvar" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #2196f3;" size = "10" maxlength = "30" class="form-control" class="btn btn-primary">Ir para página principal</a></center>
+        <center> <a href="./actividades.php"  value="Salvar" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #16035a;" size = "10" maxlength = "30" class="form-control" class="btn btn-primary">Ir para página principal</a></center>
      
             </div>
           <!-- /. box -->

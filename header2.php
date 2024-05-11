@@ -106,7 +106,7 @@
       <!-- logo for regular state and mobile devices -->
     </a>
     <!-- Header Navbar: style can be found in header.less -->
-     <nav class="navbar navbar-fixed-top "STYLE = "color: white; font-family: Verdana;  font-size: 13px; background-color: #0d6efd;">
+     <nav class="navbar navbar-fixed-top "STYLE = "color: white; font-family: Verdana;  font-size: 13px; background-color: #16035a;">
 
       <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
@@ -130,7 +130,7 @@
                            }
                            ?> </ul>
                            
-                           <!--a href="index.php" style="color: #2196f3;font-size: 30px;">Sistema de Gestão Hospitalar</a-->
+                           <!--a href="index.php" style="color: #16035a;font-size: 30px;">Sistema de Gestão Hospitalar</a-->
              
       </div>
     </nav>

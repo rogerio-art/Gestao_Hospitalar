@@ -48,7 +48,7 @@ Meus Justificativos
 
 </br></br>
 
-  &nbsp;&nbsp;&nbsp;&nbsp;<a href="./recrutamentoLoged.php"class="btn btn-primary bg-blue"  style="height: 35px;"><i class="fa fa-plus-circle"></i> Solicitar Justificativo</a><!-- </a> --><br><br>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="./recrutamentoLoged.php"class="btn"STYLE ="color: white; background-color: #16035a;"><i class="fa fa-plus-circle"></i> Solicitar Justificativo</a><!-- </a> --><br><br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -89,7 +89,7 @@ foreach ($row1 as $row)
 <td><?php echo $row['descriacao'];?></td>
 
 
-<td><a href="viewjustify.php?id=<?php echo $row['id']; ?>"> <span class="btn bg-blue "><i class="fa fa-eye"> Ver</i> </span> </a>
+<td><a href="viewjustify.php?id=<?php echo $row['id']; ?>"> <span class="btn"STYLE ="color: white; background-color: #16035a;"><i class="fa fa-eye"> Ver</i> </span> </a>
 
 </td>
 </tr>
@@ -99,15 +99,16 @@ foreach ($row1 as $row)
   </tbody>
   
 </table>
-</br>
-<a href="actividades.php"><span class="btn btn-primary bg-blue"><i class="fa fa-back"></i>Voltar</span><!--&nbsp;&nbsp;-->
 
-    <!-- <button type="button" onclick="window.print();" class="btn btn-primary bg-blue">Imprimir</button> -->
+
+    <!-- <button type="button" onclick="window.print();" class="btn"STYLE ="color: white; background-color: #16035a;">Imprimir</button> -->
  
        </div>
       </div>       
       </div>
     </section>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="actividades.php"><span class="btn"STYLE ="color: white; background-color: #16035a;"><i class="fa fa-back"></i>Voltar</span><!--&nbsp;&nbsp;-->
+
   </div>
  <?php include"./footer.php";?>
   

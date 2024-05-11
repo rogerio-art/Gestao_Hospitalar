@@ -11,7 +11,6 @@
     $row=mysqli_fetch_array($write)or die (mysqli_error($connection));
     $estado=$row     ['estado'];
 
-   
     //echo $row['date  ']; exit();
    //print_r($row); exit;
    //echo "$firstname"; exit();
@@ -21,14 +20,10 @@
 
 //session_start();
 
-
-
-
-   
       $write =mysqli_query($connection,"UPDATE addappointment SET estado='2' WHERE id='".$_GET['id']."'") or die(mysqli_error($connection));
       //$query=mysql_query("SELECT * FROM user ")or die (mysql_error());
       //$numrows=mysql_num_rows($query)or die (mysql_error());
-       echo " <script>setTimeout(\"location.href='./atividadeConsulta.php';\",150);</script>";
+       echo " <script>setTimeout(\"location.href='./matricula.php';\",150);</script>";
 
    
 

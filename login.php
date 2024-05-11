@@ -1,8 +1,8 @@
 <?php include('headerlogout.php');?>
 <!doctype html>
 <html lang="pt">
-    <head>
-        <meta charset="utf-8">
+    <head>   
+        <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <meta name="description" content="">
@@ -75,7 +75,7 @@
                               </div>
                           </div>
                           <div class="content-update-box">
-                              <input name="loginuser" type="submit"  onclick="submit" id="log-btn" value="Entrar" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #2196f3;" size = "10" maxlength = "30" class="form-control" class="btn btn-primary"  />
+                              <input name="loginuser" type="submit"  onclick="submit" id="log-btn" value="Entrar" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #16035a;" size = "10" maxlength = "30" class="form-control" class="btn btn-primary"  />
                       
                       
                             </div>

@@ -53,7 +53,7 @@ function mysql_fetch_all($query) {
   <div class="content-wrapper">
          <section class="content-header">
        <h1>
-       <font color="black">Recibo da consulta</font>
+       <font color="black">Recibo de Matrícula</font>
          <small></small>
         </h1>
       <ol class="breadcrumb">
@@ -69,20 +69,20 @@ function mysql_fetch_all($query) {
          <div class="col">
          <table class="table">
                      <thead>
-                         <img src="./Upload/Adminprofile/Logotipo Clinica Saude.png"  width="10%" height="10%" class="img-circle" alt="Clinica saude logo">
+                         <img src="./Upload/Adminprofile/Logotipo Clinica Saude.png"  width="6%" height="6%" class="img-circle" alt="Clinica saude logo">
                          <th>
                         
-                         <h3><p>Clínica-Saude</p></h3>
-                           <b><p>Localização |</b>Zaire-Soyo Bairro Pangala Rua principal</p>
-                            <b><p>Telefone |</b> 937 277 985 | 998 521 361 | 937 279 624</p>
-                            <b><p>Email |</b> atendimento@clinica-saude.co.ao</p>
-                            <b><p>Site |</b> www.clinica-saude.co.ao</p>
-                          <p><strong>Nº da Consulta <?= time(); ?></strong></p></h5> 
+                         <h4><p>Lameira-Soft</p></h4>
+                           <b><p>Localização |</b>Angola-Luanda Viana Vila</p>
+                            <b><p>Telefone |</b> 944 259 591 | 944 259 591 | 944 259 591</p>
+                            <b><p>Email |</b> geral@lameirasoft.ao</p>
+                            <b><p>Site |</b> www.lameirasoft.ao</p>
+                          <p><strong>Nº de matrícula: <?php echo $p_row[0]['cod_matricula'] ; ?></strong></p></h5> 
                         </th>
-                        <th ><h3> <p><strong>Recibo de Consulta</strong></p></h3> </th>
+                        <th ><h3> <p><strong>Recibo de Matrícula</strong></p></h3> </th>
                         
                      
-                      <th ><h4> <p>Utente: <strong><?=  $p_row[0]['namepatient']; ?></strong></p></h4> </th>
+                      <th ><h4> <p>Formando: <strong><?=  $p_row[0]['namepatient']; ?></strong></p></h4> </th>
                    </thead>
               </table>
            </div>
@@ -96,9 +96,9 @@ function mysql_fetch_all($query) {
                 <table   class="table table-bordered table-hover " >
                      <thead  >
                          <tr>
-                             <th>Data da Consulta</th>
-                             <th class="text-center">Nome da Consulta</th>
-                             <th class="text-end">Morada do Paciente</th>
+                             <th>Data da Matricula</th>
+                             <th class="text-center">Nome do curso</th>
+                             <th class="text-end">Morada do Formando</th>
                              <th class="text-center">Telefone</th>
                          </tr>
                      </thead>
@@ -144,7 +144,7 @@ function mysql_fetch_all($query) {
               <table   class="table table-bordered table-hover " >
                      <thead  >
                          <tr>
-                             <th>Preço da Consulta</th>
+                             <th>Preço da Matrícula</th>
                            
                          </tr>
                      </thead>
@@ -182,7 +182,7 @@ function mysql_fetch_all($query) {
               
                    
                       
-                        <p><center> Nome do (a) Médico(a) </center></p>
+                        <p><center> Nome do (a) Formador(a) </center></p>
                         <center>_____________________________________________<center>
                         <p><center><?php echo $row['doctor'];   ?></center> </p>
                     </div>
@@ -223,9 +223,9 @@ function mysql_fetch_all($query) {
 </div>
 </section>
 
-                         <!--button   href="./prescription.php"><span  class="btn bg-blue" class="hidden-xs" ><i class="fa fa-back"></i>Voltar</span></button--><!--&nbsp;&nbsp;-->
-                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <a onclick=" window.print();" id="print-btn" class="btn bg-blue"><i class="fa  fa-print"></i> </button>
-                         <!--a href="atividadeConsulta.php"><span class="btn bg-blue"><i class="fa fa-back"></i-->   <!--span class="popuptext" id="myPopup">Get full version at rogeriolameira@gmail.com</span--></span></a><!--&nbsp;&nbsp-->
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="matricula.php"><button type="button" class="btn"STYLE ="color: white; background-color: #16035a;">Voltar</button></a><!--&nbsp;&nbsp;-->
+              &nbsp;&nbsp; <a onclick=" window.print();" id="print-btn" class="btn"STYLE ="color: white; background-color: #16035a;"><i class="fa  fa-print"></i> </button>
+                         <!--a href="atividadeConsulta.php"><span class="btn"STYLE ="color: white; background-color: #16035a;"><i class="fa fa-back"></i-->   <!--span class="popuptext" id="myPopup">Get full version at rogeriolameira@gmail.com</span--></span></a><!--&nbsp;&nbsp-->
                          </body> 
                          </div>  
                         

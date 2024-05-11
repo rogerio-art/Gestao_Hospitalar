@@ -1,7 +1,7 @@
 
 <div class="row">
       <div class="col">
-        <nav class="navbar navbar-expand-lg "STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 20px; background-color: #0d6efd;">
+        <nav class="navbar navbar-expand-lg "STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 20px; background-color: #16035a;">
 
           <ul class="mobile-header-buttons">
             <li><a class="mobile-nav-trigger" href="#mobile-primary-nav">Menu<span></span></a></li>

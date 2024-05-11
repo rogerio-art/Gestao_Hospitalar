@@ -2,8 +2,15 @@
 <?php include"../Include/header.php";?>
 <?php include"../Include/sidebar.php";?>
 <?php
-include("../inc/connect.php");
+include("../inc/connect.php");?>
+<?php
+session_start();    
 
+if (empty($_SESSION['id'])) {
+    header("location: ../Validar_user_logado.php");
+    
+}
+    ?>
 
 $query=mysqli_query ($connection,"SELECT `id_medico`,`nomemedico`,`especialidade` FROM medicos") or die (mysqli_error($connection));
 $numrows=mysqli_num_rows($query)or die (mysqli_error($connection));
@@ -32,12 +39,12 @@ function mysql_fetch_all($query)
 <div class="content-wrapper">
     <section class="content-header">
       <h1>
-         Medicos Activos no Sistema
+         Formadores Activos no Sistema
         <small></small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="../Index"><i class="fa fa-dashboard"></i> Início</a></li>
-        <li class="active">Lista de Médicos</li>
+        <li class="active">Lista de Formador</li>
       </ol>
     </section>
 
@@ -48,10 +55,10 @@ function mysql_fetch_all($query)
     
 
       <div class="box-header with-border ">
-        <i class="fa fa-user"></i> <h3 class="box-title">Medicos Activos</h3>
+        <i class="fa fa-user"></i> <h3 class="box-title">Formadores Activos</h3>
       </div>
          <div class="box-header">
-         <a href="createdotor.php"><button  data-toggle="modal" data-target="#myModal" class= "btn bg-blue" type="button" ><i class="fa fa-plus-square"></i> Registrar<!--span class="popuptext" id="myPopup">para obter a versão completa contacte o admin.rogeriolameira2017@gmail.com</span--></button></a>
+         <a href="createdotor.php"><button  data-toggle="modal" data-target="#myModal" class= "btn bg-blue" type="button" ><i class="fa fa-plus-square"></i> Novo Formador<!--span class="popuptext" id="myPopup">para obter a versão completa contacte o admin.rogeriolameira2017@gmail.com</span--></button></a>
     </div>
   
       <div class="modal fade" id="myModal" role="dialog">

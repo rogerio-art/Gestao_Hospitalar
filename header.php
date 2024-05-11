@@ -28,7 +28,7 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
-  <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">  
   <!-- Font Awesome -->
   <link rel="stylesheet" href="./bower_components/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
@@ -59,8 +59,8 @@
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
-  <link rel="stylesheet" href="css/style3.css">
+    <![endif]-->
+    <link rel="stylesheet" href="css/style3.css">
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
@@ -130,14 +130,14 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="actividades.php" class="logo">
+    <a href="actividades.php" class="logo" STYLE ="color: white; background-color: #1a2226;">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg"><b>Lameira-</b>Soft</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
-    <nav class="navbar navbar-fixed-top">
+    <nav class="navbar navbar-fixed-top" STYLE ="color: white; background-color: #16035a;">
       <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
         <span class="sr-only">Toggle navigation</span>
@@ -148,7 +148,7 @@
 
               <ul class="nav navbar-nav"><?php  if(isset($_SESSION['email'])){
                            ?>
-                          <li > <a href="dashboard.php"><font color ="white">Olá: <?php echo  ($_SESSION ['name']); ?></font></a></li>
+                          <li > <a href="mininhaConta.php"><font color ="white">Olá: <?php echo  ($_SESSION ['name']); ?></font></a></li>
                           <li > <a href="logoutUser.php"><font color ="white">Sair</font></a></li>
                          
                          <?php

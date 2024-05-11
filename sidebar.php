@@ -42,19 +42,19 @@ $sql="SELECT * FROM patientregister";
      
         <li>
           
-          <a class="nav-link"   href="./actividades.php"><i class="fa fa-dashboard"></i> <span> Área do Usuário </span></a>
+          <a class="nav-link"   href="./actividades.php"><i class="fa fa-dashboard"></i> <span> Área do Aluno </span></a>
          
         </li>
         <li>
           
-          <a class="nav-link"  href="./marcarconsulta.php"><i class="fa fa-calendar"></i><span> Agendar Online </span></a>
+          <a class="nav-link"  href="./fichadematricula.php"><i class="fa fa-calendar"></i><span> Matrícula Online </span></a>
          
         </li>
 
        
 
         <li>
-        <a class="nav-link"  href="./medicosFree.php"><i class="fa fa-user"></i><span> Corpo clínico </span></a>
+        <a class="nav-link"  href="./medicosFree.php"><i class="fa fa-user"></i><span> Formadores </span></a>
      
         </li>
 
@@ -71,17 +71,17 @@ $sql="SELECT * FROM patientregister";
 
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-phone"></i> <span> Contacto</span>
+            <i class="fa fa-phone"></i> <span>Material de Apoio</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
             
-          <li><a href="./cTodosontactos.php"><i class="fa fa-phone"></i> Todos Contactos</a></li>
-          <li><a href="./contactosRecebido.php"><i class="fa fa-phone"></i> Entrada</a></li>
+          <!--li><a href="./cTodosontactos.php"><i class="fa fa-phone"></i> Material de apoio</a></li-->
+          <li><a href="./contactosRecebido.php"><i class="fa fa-phone"></i> Recebido</a></li>
           <li><a href="./contactosEnviados.php"><i class="fa fa-phone"></i> Enviado</a></li>
-          <li><a class="nav-link"  href="./recrutamentoLoged.php"><i class="fa fa-send"></i><span> Candidatura/Contacto</span></a></li>
+          <li><a class="nav-link"  href="./recrutamentoLoged.php"><i class="fa fa-send"></i><span> Enviar anexo</span></a></li>
          </ul>
         </li>
 
@@ -93,7 +93,7 @@ $sql="SELECT * FROM patientregister";
         <!--a class="nav-link"  href="./about.php"><i class="fa fa-info"></i><span> Sobre nós </span></a-->
 </li>
 <li>
-        <a class="nav-link"  href="./exameElectronic.php"><i class="fa fa-send"></i><span>Prova Eletrónica</span></a>
+        <a class="nav-link"  href="./exameElectronic.php"><i class="fa fa-send"></i><span>Teste Eletrónico  </span></a>
    
    </li>
        

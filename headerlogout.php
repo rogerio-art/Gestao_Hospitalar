@@ -19,15 +19,16 @@
       
       <!-- logo for regular state and mobile devices -->
     </a>
-    <nav class="navbar navbar-expand-lg  fixed-top " STYLE ="color: white; background-color: #0d6efd;">
+    <nav class="navbar navbar-expand-lg  fixed-top " STYLE ="color: white; background-color: #16035a;">Lameira Soft
                 <div class="container">
                     <a class="navbar-brand mx-auto d-lg-none" href="index.php">
                         
-                        <strong class="d-block"><font color="white">Lameira Soft</font></strong>
+                        <strong class="d-block"><font color="white"></font></strong>
                     </a>
 
                     <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav mx-auto">
+                      
+                        <!--ul class="navbar-nav mx-auto">
                             
                             <li class="nav-item active">
                                 <a class="nav-link" href="index.php"><font color="white">Início</font></a>
@@ -39,7 +40,7 @@
                             </li>
 
                            
-								       </ul>
+								       </ul-->
                     </div>
 
                 </div>

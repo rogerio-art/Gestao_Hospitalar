@@ -16,6 +16,7 @@ if (isset($_POST["submit"])) {
         $name = $_FILES["file"]["name"];
         $size = $_FILES["file"]["size"];
 
+        
         // Check if the file size is within the limit (10 megabytes)
         if ($size <= 10 * 1024 * 1024) {
             $temp = $_FILES["file"]["tmp_name"];

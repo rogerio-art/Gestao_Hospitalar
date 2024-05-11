@@ -160,7 +160,7 @@ $write =mysqli_query($connection,"UPDATE patientregister SET name='$fname', imag
             
           <div class="col text-end">
                          <button type="submit" name="submit" class="btn btn-primary bg-blue"><i class="fa fa-back"></i>Atualizar</button> </span><!--&nbsp;&nbsp;-->
-                         <a href="logout.php"><span class="btn btn-primary bg-blue"><i class="fa fa-back"></i>Sair</span><!--&nbsp;&nbsp;-->
+                         <a href="actividades.php"><span class="btn btn-primary bg-blue"><i class="fa fa-back"></i>Voltar</span><!--&nbsp;&nbsp;-->
          
                    
         </div>

@@ -5,7 +5,7 @@ include("../inc/connect.php");
 
 
 
-$s=("SELECT * FROM addappointment WHERE `app_date`");
+$s=("SELECT * FROM addappointment ");
 $query=mysqli_query($connection,$s)or die (mysqli_error($connection));
 
 $numrows=mysqli_num_rows($query)or die (mysqli_error($connection));
@@ -76,12 +76,11 @@ function mysql_fetch_all($query) {
                   <th>Especialidade</th>
                   <th>Médico</th>
                   <th>Data</th>
-                 <th>Hora</th>
+                  <th>Hora</th>
                   <th>Opção</th>
-                  
-                </tr>
-                </thead>
-                <tbody>
+                  </tr>
+                  </thead>
+                  <tbody>
                   <?php
      foreach ($row1 as $row)
       { 

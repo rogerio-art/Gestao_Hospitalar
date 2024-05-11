@@ -60,7 +60,7 @@
             <!-- <button class="form-control btnbackground-blue"  id="log-btn" name="login" type="submit"  class="btn btn-primary">Entrar</button>
           <a href=""  id="submit" name="btn-lg" type="submit"   class="btn btn-primary">Entrar</a> -->
        
-      <input name="loginmedi" type="submit"  onclick="submit" id="log-btn" value="Entrar" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #2196f3;" size = "10" maxlength = "30" class="form-control" class="btn btn-primary"  />
+      <input name="loginmedi" type="submit"  onclick="submit" id="log-btn" value="Entrar" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #16035a;" size = "10" maxlength = "30" class="form-control" class="btn btn-primary"  />
       </div>
 
    

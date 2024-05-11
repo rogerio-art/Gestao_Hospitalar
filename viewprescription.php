@@ -72,11 +72,11 @@ function mysql_fetch_all($query) {
                          <img src="./Upload/Adminprofile/Logotipo Clinica Saude.png"  width="10%" height="10%" class="img-circle" alt="Clinica saude logo">
                          <th>
                         
-                         <h3><p>Clínica-Saude</p></h3>
-                           <b><p>Localização |</b>Zaire-Soyo Bairro Pangala Rua principal</p>
-                            <b><p>Telefone |</b> 937 277 985 | 998 521 361 | 937 279 624</p>
-                            <b><p>Email |</b> atendimento@clinica-saude.co.ao</p>
-                            <b><p>Site |</b> www.clinica-saude.co.ao</p>
+                         <h3><p>Lameira-Soft</p></h3>
+                           <b><p>Localização |</b>Angola-Luanda Viana Vila</p>
+                            <b><p>Telefone |</b> 944 259 591 | 944 259 591 | 944 259 591</p>
+                            <b><p>Email |</b> geral@lameirasoft.ao</p>
+                            <b><p>Site |</b> www.lameirasoft.ao</p>
                          
                           <p><strong>Nº da Prescrição <?= time(); ?></strong></p></h5> 
                         </th>
@@ -151,7 +151,7 @@ function mysql_fetch_all($query) {
                      <tbody>
 
                                 <tr>
-                                <td "><?php echo $row['medication'];   ?> </td>
+                                <td><?php echo $row['medication'];   ?> </td>
                                       </tr>
 
                      </tbody>
@@ -234,9 +234,9 @@ $sql="SELECT * FROM login";
 
 <div >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                          <!--button   href="./prescription.php"><span  class="btn bg-blue" class="hidden-xs" ><i class="fa fa-back"></i>Voltar</span></button--><!--&nbsp;&nbsp;-->
-                         <a href=" ./PrescAtivi.php"  class="btn bg-blue"></i>  Voltar</a>
+                         <a href=" ./PrescAtivi.php"  class="btn"STYLE ="color: white; background-color: #16035a;"></i>  Voltar</a>
        
-<button onclick=" window.print();" id="print-btn" class="btn bg-blue"><i class="fa  fa-print"></i>  Imprimir</button>
+<button onclick=" window.print();" id="print-btn" class="btn"STYLE ="color: white; background-color: #16035a;"><i class="fa  fa-print"></i>  Imprimir</button>
     
 </div>    
 </div>

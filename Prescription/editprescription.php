@@ -31,7 +31,8 @@ if(isset($_POST['submit']))
     $medication=$_POST['medication'];
     $note=$_POST['note'];
    
-      $write =mysqli_query($connection,"UPDATE addnewpres SET date='$date',patient='$patient',history='$history',medication='$medication',note='$note' WHERE id='".$_GET['id']."'") or die(mysqli_error($connection));
+      $write =mysqli_query($connection,"UPDATE addnewpres SET history='$history',medication='$medication',note='$note' WHERE id='".$_GET['id']."'") or die(mysqli_error($connection));
+      //date='$date',patient='$patient': apagei esta linnha de código do update para naão permitir editar o nome do paciente e data 
       //$query=mysql_query("SELECT * FROM user ")or die (mysql_error());
       //$numrows=mysql_num_rows($query)or die (mysql_error());
        echo " <script>setTimeout(\"location.href='../prescription/prescription.php';\",150);</script>";
@@ -80,20 +81,22 @@ function mysql_fetch_all($query) {
        
                   <label for="exampleInputEmail1">Data</label><br>
 
-                  <input type="date" name="date" class="form-control" value="<?php echo  $date;?>" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <input type="text" name="date" class="form-control" value="<?php echo  $date;?>" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <div class="form-group">
-                 <select name="patient" class="form-control select2"  placeholder="">
-<option>...Selecione...</option>
-<?php
+                 
+                 <label for="exampleInputEmail1">Paciente</label>
+                 <input type="text" name="patient" class="form-control" value="<?php echo  $patient;?>" >
+                 <!--select name="patient" class="form-control select2"  placeholder="">    
+<//?php
 
  $p_query="SELECT * FROM patientregister";
 $res=mysqli_query($connection,$p_query);
 while ($row1 =mysqli_fetch_array($res)) {
    echo $row1['id'];?>
-<option value="<?php echo  $patient;?>"<?php if ($patient==$row1['name']) {
-  echo "Selected";}?>><?php echo $row1['name'];?>
+<option value="<?php //echo  $patient;?>"<?php //if ($patient==$row1['id']) {
+// }?>><?php// echo $row1['name'];?>
  </option>
-<?php } ?></select>
+<?php //} ?></select-->
                  
                 </div>
                 </div>

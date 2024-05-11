@@ -3,6 +3,12 @@
 <?php include"../Include/sidebar.php";?>
 <?php 
 include("../inc/connect.php") ;
+if($_SESSION["email"]) {
+  ?>
+  <?php
+  }else header("Location: ../Validar_user_logado.php");
+
+?>
   
 $sql="SELECT * FROM login WHERE id='".$_SESSION['id']."'"; //deve estar assim porque senºao quando tiver mais de um admin vai dar probulema porque el só vai pegar o admin da primeira linha na tabela
 //echo $sql;
@@ -156,9 +162,9 @@ if(isset($_POST['update']))
          
         </form> 
         <div class="box-footer">
-           <button type="submit"  name="update" class="btn btn-success bg-green" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #2196f3;"><i class="fa fa-file-text"></i> Salvar</button>
+           <button type="submit"  name="update" class="btn btn-success bg-green" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #16035a;"><i class="fa fa-file-text"></i> Salvar</button>
           <!--  <button type="reset"  name="reset" class="btn btn-primary" value="reset"><i class="f fa fa-undo"></i> Reset</button> -->
-          <a href="../Index/index.php"><button type="button" name="cancel" class="btn btn-primary" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #2196f3;"><i class="fa fa-times"></i> Cancelar</button></a>
+          <a href="../Index/index.php"><button type="button" name="cancel" class="btn btn-primary" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #16035a;"><i class="fa fa-times"></i> Cancelar</button></a>
               </div>
    </div>
   </div>

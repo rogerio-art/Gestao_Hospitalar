@@ -41,7 +41,7 @@ https://templatemo.com/tm-566-medic-care
     
         <main>
 
-            <nav class="navbar navbar-expand-lg  fixed-top " STYLE ="color: white; background-color: #0d6efd;">
+            <nav class="navbar navbar-expand-lg  fixed-top " STYLE ="color: white; background-color: #16035a;">
               
             <div class="container">
                     <a class="navbar-brand mx-auto d-lg-none" href="index.php">

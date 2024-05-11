@@ -1,4 +1,7 @@
 <?php
+include('config/db.php');
+include('header.php');
+include('sidebar.php');
 session_start();    
 
 if (empty($_SESSION['email'])) {
@@ -7,9 +10,7 @@ if (empty($_SESSION['email'])) {
 }
     ?>
 <?php
-include('config/db.php');
-include('header.php');
-include('sidebar.php');
+
 
 $query = "SELECT * FROM contacto WHERE userID = '" . $_SESSION['id'] . "' AND Direcao='enviadoUser' ORDER BY id DESC ";
 $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
@@ -53,11 +54,16 @@ Meus contactos enviado
 <div class="box box-primary">
 <div class="box-header with-border">
 <i class="fa fa-user"></i> <h3 class="box-title"> Nome :  <?php echo ($_SESSION ['name'] ); ?></h3>
+<br>
+<br>
+<i class="fa fa-send"></i>Contactos Enviados
 </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 <div>
+
 <!--button type="button" onclick="window.print();" class="btn btn-primary"><i class="fa fa-print"></i> Imprimir</button-->
 </div>
 <div class="box-body">
@@ -116,11 +122,11 @@ $row2=mysqli_fetch_array($w1);//or die (mysqli_error($connection));
 </td>
 
 <td>
-  <a href="ver_contactoUser.php?id=<?php echo $row['id']; ?>" class="btn bg-blue">
+  <a href="ver_contactoUser.php?id=<?php echo $row['id']; ?>" class="btn"STYLE ="color: white; background-color: #16035a;">
     <i class="fa fa-eye"></i>
   </a>&nbsp;&nbsp;
 
-  <a href="./Admin/donwload.php?file=<?php echo $row['file']; ?>" class="btn bg-blue">
+  <a href="./Admin/donwload.php?file=<?php echo $row['file']; ?>" class="btn"STYLE ="color: white; background-color: #16035a;">
     <i class="fa fa-download"></i>
   </a>&nbsp;
 
@@ -128,14 +134,14 @@ $row2=mysqli_fetch_array($w1);//or die (mysqli_error($connection));
   // Check if there is an image to display
   if (!empty($row['file']) && file_exists($filePath)) {
   ?>
-    <a href="./Upload/File/<?php echo $row['file']; ?>" target="_blank" class="btn bg-blue">
+    <a href="./Upload/File/<?php echo $row['file']; ?>" target="_blank" class="btn"STYLE ="color: white; background-color: #16035a;">
       <i class="fa fa-eye"></i> 
     </a>
   <?php
   } else {
     // Display a disabled button if there is no image
     ?>
-    <button class="btn btn-primary" disabled>
+    <button class="btn" STYLE ="color: white; background-color: #16035a;" disabled>
       <i class="fa fa-eye"></i> 
     </button>
     <?php

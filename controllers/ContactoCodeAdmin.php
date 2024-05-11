@@ -18,6 +18,11 @@ if (isset($_POST["submit"])) {
     $patient = $_POST['email'];
     $title = $_POST['email'];
 
+    $p_query = "SELECT name FROM patientregister WHERE id = $id";
+    $res = mysqli_query($connection, $p_query);
+    $row = mysqli_fetch_array($res);
+    $nome = $row['name']; 
+
     $target_dir = "../Upload/File/";
     $name = $_FILES["file"]["name"];
     $type = $_FILES["file"]["type"];
@@ -50,36 +55,18 @@ if (isset($_POST["submit"])) {
         // Verify if form values are not empty
         if(!empty($email) && !empty($assunto) && !empty($id) && !empty($contactType) && !empty($mensagem) && !empty($telefone)){
             
-            // check if user mensagem already exist
-                if($rowCount > 0) {
-                    $mensagem_exist = '
-                        <div class="alert alert-danger" role="alert">
-                        O e-mail do usuário já existe!
-                        </div>';
-                } else {
-                // clean the form data before sending to database
-                $_first_name = mysqli_real_escape_string($connection, $email);
-                $_last_name = mysqli_real_escape_string($connection, $assunto);
-               $_email = mysqli_real_escape_string($connection, $mensagem);
-                $_mobile_number = mysqli_real_escape_string($connection, $telefone);
- //               $_senha = mysqli_real_escape_string($connection, $file);
-
-        
-                    // Query
-                    $sql = "INSERT INTO contacto (userID, name, email, assunto, mensagem, telefone, contactType, file, Direcao, Data) VALUES ('{$id}', '{$nome}', '{$email}', '{$assunto}', '{$mensagem}', '{$telefone}','{$contactType}', '{$name}','Admin',now())";
-        
-                    // Create mysql query
-                    $sqlQuery = mysqli_query($connection, $sql);
-                }
+            
+          // Query
+          $sql = "INSERT INTO contacto (userID, name, email, assunto, mensagem, telefone, contactType, file, Direcao, Data) VALUES ('{$id}', '{$nome}', '{$email}', '{$assunto}', '{$mensagem}', '{$telefone}','{$contactType}', '{$name}','Admin',now())";
+          $sqlQuery = mysqli_query($connection, $sql);
+                
                     if(!$sqlQuery){
                         die("MySQL query failed!" . mysqli_error($connection));
                     } 
-                    header("Location: ./contacto_sucessoAdmin.php");
+                   header("Location: ./contacto_sucessoAdmin.php");
                     // Send verification mensagem
-                     if($sqlQuery) {
-                       $msg = 'Clica no link de activação para verificares no teu e-mail. <br><br>
-                        <a href="http://localhost/gestaohospitalar/user_verificaiton.php?TipodePaciente='.$TipodePaciente.'"> Click here to verify mensagem</a>';
-
+                    if($sqlQuery) {
+                    
                         // Create the Transport
                         $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
                          ->setUsername('your_mensagem@gmail.com')

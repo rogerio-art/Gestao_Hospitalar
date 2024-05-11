@@ -116,10 +116,10 @@
                               </div>
                           </div>
                           <div class="content-update-box">
-                          <!--input  type="submit" name="submit" id="submit" class="form-control" value="Salvar" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #2196f3;" size = "10" maxlength = "30" class="form-control" class="btn btn-primary"  /-->
+                          <!--input  type="submit" name="submit" id="submit" class="form-control" value="Salvar" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #16035a;" size = "10" maxlength = "30" class="form-control" class="btn btn-primary"  /-->
   
                              
-                              <input name="submit" type="submit"  onclick="submit" id="log-btn" value="Salvar" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #2196f3;" size = "10" maxlength = "30" class="form-control" class="btn btn-primary"  />
+                              <input name="submit" type="submit"  onclick="submit" id="log-btn" value="Salvar" STYLE = "color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #16035a;" size = "10" maxlength = "30" class="form-control" class="btn btn-primary"  />
                       
                           </div>
                           <div class="account-have text-center">

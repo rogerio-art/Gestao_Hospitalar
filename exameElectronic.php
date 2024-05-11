@@ -1,5 +1,6 @@
-<?php
-session_start();    
+<?php include('header.php');?>
+<?php include('sidebar.php');?>
+<?php session_start();    
 
 if (empty($_SESSION['email'])) {
     header("location: ./Validar_user_logado.php");
@@ -7,11 +8,10 @@ if (empty($_SESSION['email'])) {
 }
     ?>
 
-<?php include('header.php');?>
-<?php include('sidebar.php');?>
+
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     
@@ -31,7 +31,7 @@ if (empty($_SESSION['email'])) {
         #exam-container {
             max-width: 600px;
             margin: 50px auto;
-            background-color: #0d6efd;
+            background-color: #16035a;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -52,21 +52,35 @@ if (empty($_SESSION['email'])) {
             text-align: center;
         }
     </style>
+      <style>
+        /* Definindo a cor da barra de progresso */
+        #progress-bar {
+            background-color: ; /* Cor de fundo */
+        }
+
+        #progress-bar::-webkit-progress-value {
+            background-color: red; /* Cor da barra de progresso preenchida */
+        }
+    </style>
 </head>
 
 <body>
 <div class="content-wrapper">
         <section class="content-header">
       <h1>
-      <font color="black">Minhas Actividades</font>  
+      <font color="black">Prova eletrónica</font>  
         <small></small>
        </h1>
      <ol class="breadcrumb">
        <li><a href="./index.php"><i class="fa fa-dashboard"></i>Casa</a></li>
-       <li class="active">Minhas Actividades</li>
+       <li class="active">Minhas Actividades</li><br>
+       <!-- Barra de progresso -->
+    <progress id="progress-bar"  class="form-control" max="60" value="60"></progress>
+
      </ol>
    </section>
    <section class="content">
+   <div id="timer"style="color: red;">Tempo restante: 1:00</div>
      <div class="box box-primary">
        <div class="box-header with-border">
          <i class=""></i>
@@ -77,7 +91,7 @@ if (empty($_SESSION['email'])) {
         <div id="question-container">
             <!-- Questões e opções de respostas serão carregadas aqui dinamicamente -->
         </div>
-        <button id="next-btn">Próxima Pergunta</button>
+        <button id="next-btn" type="button" class="btn"STYLE ="color: black; background-color: lavanda;">Próxima Pergunta</button>
         <button id="submit-btn" style="display:none;">Submeter Exame</button>
         <div id="result-container" style="display:none;">
             <h2>Resultado:</h2>
@@ -191,7 +205,8 @@ if (empty($_SESSION['email'])) {
     document.getElementById("score-input").value = score;
 
     // Submeter o formulário
-    document.getElementById("exam-form").submit();
+   document.getElementById("exam-form").submit();
+   alert("Exame Concluido com sucesso!");
 }
 
     // Event listener para o botão "Submeter Exame"
@@ -201,21 +216,89 @@ if (empty($_SESSION['email'])) {
 
     // Função para enviar a variável para o PHP
     
-        alert("Exame submetido com sucesso!");
         resetQuiz();
     });
 
     // Iniciar o carregamento da primeira pergunta
     resetQuiz();
 </script>
-   
+ <!-- Elemento para exibir o temporizador -->
+ <script>
+        let timeLeft;
+
+        // Verificar se há um valor salvo no armazenamento local
+        const storedTime = localStorage.getItem('timeLeft');
+        if (storedTime) {
+            timeLeft = parseInt(storedTime, 10);
+        } else {
+            // Se não houver valor salvo, definir o tempo inicial em segundos (3 minutos)
+            timeLeft = 60;
+        }
+
+        const timerElement = document.getElementById('timer');
+        const progressBar = document.getElementById('progress-bar');
+        //  const submitBtn = document.getElementById('submit-btn');
+
+        // Função para atualizar o temporizador a cada segundo
+        const timerInterval = setInterval(() => {
+            // Se o tempo restante for menor ou igual a zero, parar o temporizador
+            if (timeLeft <= 0) {
+                clearInterval(timerInterval);
+                localStorage.removeItem('timeLeft'); // Remover o valor do armazenamento local
+                // Função para submeter o formulário
+                // Enviar a pontuação para o servidor
+    const formData = new FormData();
+    formData.append('score', score); // Adicione a pontuação ao formulário de dados
+
+    // Use AJAX ou Fetch API para enviar os dados para o servidor
+    fetch('./exameEletronicScript.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (response.ok) {
+            // Se a resposta do servidor estiver ok, então submeta o formulário
+            //document.getElementById("exam-form").submit();
+        } else {
+            // Se houver um erro ao enviar a pontuação, exiba uma mensagem de erro
+            console.error('Erro ao enviar pontuação para o servidor');
+        }
+    })
+    .catch(error => {
+        console.error('Erro ao enviar pontuação para o servidor:', error);
+    });
+                //submitBtn.click(); simular o click do botão sobre uma condição
+                    window.location.href = 'actividades.php'; // Redirecionar para index.php
+            } else {
+                // Atualizar a barra de progresso
+                progressBar.value = timeLeft;
+
+                // Converter o tempo restante para minutos e segundos
+                const minutes = Math.floor(timeLeft / 60);
+                let seconds = timeLeft % 60;
+                // Adicionar um zero à esquerda se os segundos forem menores que 10
+                seconds = seconds < 10 ? '0' + seconds : seconds;
+                // Atualizar o texto do temporizador
+                timerElement.textContent = `Tempo restante: ${minutes}:${seconds}`;
+
+                // Decrementar o tempo restante e salvar no armazenamento local
+                timeLeft--;
+                localStorage.setItem('timeLeft', timeLeft.toString());
+            }
+        }, 1000); // Executar a cada segundo
+    </script>
 </body>
-</div>
+            </div>
+       
+            </div>        
+
+
+            <?php include('footer.php'); ?>
       </div>
     </div>
   </div>
   </div>
 </section>
-  </div>      
-</html>
-<?php include('footer.php'); ?>
+
+
+        </html>

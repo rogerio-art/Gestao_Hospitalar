@@ -96,7 +96,7 @@ Minhas Prescrições
       <td><//?php echo $row['endtime'];?></td--> 
    
    
-<td> <a href="viewprescription.php?id=<?php echo $row['id'];?>"><button type="button" class="btn btn-primary bg-blue"><i class="fa fa-eye"></i> Recibo</button></a>
+<td> <a href="viewprescription.php?id=<?php echo $row['id'];?>"><button type="button" class="btn"STYLE ="color: white; background-color: #16035a;"><i class="fa fa-eye"></i> Recibo</button></a>
 
     
 </td>
@@ -107,11 +107,11 @@ Minhas Prescrições
                 </tbody>
               </table>
       </br>
-      <a href="actividades.php"><button type="button" class="btn btn-primary bg-blue">Voltar</button></a><!--&nbsp;&nbsp;-->
+      <a href="actividades.php"><button type="button" class="btn"STYLE ="color: white; background-color: #16035a;">Voltar</button></a><!--&nbsp;&nbsp;-->
     <!--&nbsp;&nbsp;-->
-              <a href="./excelallappointment.php"><button type="button" class="btn btn-primary bg-blue">Exportar Excel</button></a>
+              <a href="./excelallappointment.php"><button type="button" class="btn"STYLE ="color: white; background-color: #16035a;">Exportar Excel</button></a>
 
-              <button onclick=" window.print();" id="print-btn" class="btn bg-blue"><i class="fa  fa-print"></i>  Imprimir</button>
+              <button onclick=" window.print();" id="print-btn" class="btn"STYLE ="color: white; background-color: #16035a;"><i class="fa  fa-print"></i>  Imprimir</button>
       
      
 

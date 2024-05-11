@@ -46,7 +46,7 @@
 </head>
     
     <body>
-		<nav class="navbar navbar-expand-lg  fixed-top " STYLE ="color: white; background-color: #0d6efd;">
+		<nav class="navbar navbar-expand-lg  fixed-top " STYLE ="color: white; background-color: #16035a;">
                 <div class="container">
                     <a class="navbar-brand mx-auto d-lg-none" href="index.php">
                         <strong class="d-block"><font color="white">Lameira Soft</font></strong>
@@ -90,6 +90,7 @@
 					   
 					    </ul>
 						 <!-- Slideshow 2 -->
+						 
 					</div>
 					<!--End-image-slider---->
 					
@@ -106,7 +107,7 @@
 					<center><a href="login.php">  <img src="images/grid-img3.png" alt="Descrição da Imagem" alt="Descrição da Imagem" width="30" height="25"></a></center>
 					</div>
 					<div class="text list_1_of_2">
-					<a href="login.php"><font size="3"><font color="#0077cc"><b>Usuário</b></font></font></a>
+					<a href="login.php"><font size="3"><font color="black"><strong>Usuário</strong></font></font></a>
 						<!--p id="autoResize">Entrar como Paciente</p-->
 						  <!--div class="button"><span><a href="./login.php">Clica Aqui</a></span></div-->
 					</div>
@@ -122,7 +123,7 @@
 					</div>
 				 
 					<div class="text list_1_of_2">
-						<a href="Medico.php"><font size="3"><font color="#0077cc"><b>Gestor</b></font></font></a>
+						<a href="Medico.php"><font size="3"><font color="black"><b>Gestor</b></font></font></a>
 						<!--p id="autoResize">Entrar como Médico</p-->
 						  <!--div class="button"><span><a href="medico.php">Clica Aqui</a></span></div-->
 					</div>
@@ -133,10 +134,10 @@
 					<div class="listimg listimg_1_of_2">
 						
 				
-						<center><a href="admin.php"><img src="images/grid-img2.png" alt="Descrição da Imagem" alt="Descrição da Imagem" width="30" height="25"></a></center>
+						<center><a href="./Admin/admin.php"><img src="images/grid-img2.png" alt="Descrição da Imagem" alt="Descrição da Imagem" width="30" height="25"></a></center>
 					</div>
 					<div class="text list_1_of_2">
-						<a href="admin.php"><font size="3"><font color="#0077cc"><b>Admin</b></font></font></a>
+						<a href="./Admin/admin.php"><font size="3"><font color="black"><b>Admin</b></font></font></a>
 						<!--p id="autoResize">Entrar como admin</p-->
 						  <!--div class="button"><span><a href="admin.php">Clica Aqui</a></span></div-->
 				
@@ -147,6 +148,7 @@
 		   </div>
 		   <div class="clear"> </div>
 		   <div class="footer">
+			ola mundo
 		   	 <div class="wrap">
 		   	<div class="footer-left">
 		   		
@@ -157,5 +159,6 @@
 		   </div>
 		<!--end-wrap-->
 	</body>
+	ola mundo
 </html>
 

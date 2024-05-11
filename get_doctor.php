@@ -5,14 +5,14 @@ if (!empty($_POST["specilizationid"])) {
     $especialidade = mysqli_real_escape_string($connection, $_POST['specilizationid']);
     $sql = mysqli_query($connection, "SELECT nomemedico, id_medico FROM medicos WHERE especialidade='$especialidade'");
     ?>
-    <option value="" disabled selected>Selecione o Médico</option>
+    <option value="" disabled selected>Selecione o Formador</option>
     <?php
     if ($sql === false) {
         die(mysqli_error($connection));
     }
     while ($row = mysqli_fetch_array($sql)) {
         ?>
-        <option value="<?php echo htmlentities($row['id_medico']); ?>"><?php echo htmlentities($row['nomemedico']); ?></option>
+        <option value="<?php echo htmlentities($row['nomemedico']); ?>"><?php echo htmlentities($row['nomemedico']); ?></option>
         <?php
     }
 } else if (!empty($_POST["Price"])) {
